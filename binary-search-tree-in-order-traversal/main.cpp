@@ -46,6 +46,21 @@ void inprint(const bst& t) {
   }
 }
 
+void wikiinprint(const bst& t) {
+  stack<n*> s;
+  auto c=t.root;
+  while(c||!s.empty()){
+    if(c){
+      s.push(c);
+      c=c->l;
+    } else {
+      c=s.top();s.pop();
+      cout << c->x << " ";
+      c=c->r;
+    }
+  }
+}
+
 int main(int argc, char const *argv[]) {
   cout << "Given a binary search tree, print the elements in-order iteratively without using recursion.\n";
   std::vector<int> v(10);
