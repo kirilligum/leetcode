@@ -93,6 +93,15 @@ void wikipostprint(n* root) {
   }
 }
 
+void postprintleet(n* root) {
+  stack<n*> s;
+  s.push(root);
+  n* prev = nullptr;
+  while(!s.empty()){
+    n* c = s.top()
+  }
+}
+
 int main(int argc, char const *argv[]) {
   std::vector<int> v(10);
   iota( std::begin(v), std::end(v),0);
