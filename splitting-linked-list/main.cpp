@@ -7,16 +7,13 @@
 
 using namespace std;
 
-int number_of_ones(unsigned int x) {
-  int ones=0;
-  while(x) {
-    x = (x&(x-1));
-    ++ones;
-  }
-  return ones;
-}
+struct node {
+  int x;
+  node * next;
+  node(int x,node * n=nullptr): x(x), next(n) {}
+};
 
 int main(int argc, char const *argv[]) {
-  cout <<  number_of_ones(11) << endl;
+  node * root = new node(2);
   return 0;
 }
